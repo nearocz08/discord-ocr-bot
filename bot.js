@@ -11,7 +11,7 @@ app.listen(PORT, ()=> console.log("Web server ready"));
 const { Client, GatewayIntentBits } = require("discord.js");
 const fetch = require("node-fetch");
 
-const TOKEN = "MTQ2ODk5NDc2MzE1NDkxOTYwOA.GpbMcJ.xCIjno6-It42mT5F7T6XflwzlSUgZD_efLqU4U";
+const TOKEN = process.env.DISCORD_TOKEN;
 const GAS_URL = "https://script.google.com/macros/s/AKfycbx6QYePOeoPorFNBdfsxBxIu5LOvFkzMX2KN14qfXNt9RwpteofusEuzi0ZQlW62tSeug/exec";
 
 const client = new Client({
@@ -43,5 +43,6 @@ client.on("messageCreate", async (message) => {
 });
 
 client.login(TOKEN);
+
 
 
