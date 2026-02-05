@@ -22,9 +22,12 @@ const client = new Client({
   ]
 });
 
+
 client.once("ready", () => {
   console.log("BOT ONLINE");
 });
+
+console.log("TOKEN EXIST:", !!process.env.DISCORD_TOKEN);
 
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
@@ -49,6 +52,7 @@ if(!process.env.DISCORD_TOKEN){
 
 client.login(process.env.DISCORD_TOKEN)
   .catch(err => console.log("LOGIN ERROR:", err));
+
 
 
 
