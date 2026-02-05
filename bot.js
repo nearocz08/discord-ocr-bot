@@ -43,6 +43,14 @@ client.on("messageCreate", async (message) => {
 });
 
 client.login(process.env.DISCORD_TOKEN);
+if(!process.env.DISCORD_TOKEN){
+  console.log("TOKEN NOT FOUND");
+}
+
+client.login(process.env.DISCORD_TOKEN)
+  .catch(err => console.log("LOGIN ERROR:", err));
+
+
 
 
 
