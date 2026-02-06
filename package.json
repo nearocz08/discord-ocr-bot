@@ -9,5 +9,6 @@
     "node-fetch": "^2.6.7",
     "form-data": "^4.0.0",
     "axios": "^1.6.0"
+    "dotenv": "^16.4.5"
   }
 }
